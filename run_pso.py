@@ -8,7 +8,7 @@ from module.visualization import ackley, rastrigin, griewank, schwefel, levy, An
 
 # Select function to optimize:
 # Options: 'ackley', 'rastrigin', 'griewank', 'schwefel', 'levy'
-function_name = 'ackley'  
+function_name = 'levy'  
 
 # Number of particles in the swarm
 num_particles = 30  

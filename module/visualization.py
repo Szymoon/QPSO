@@ -62,10 +62,23 @@ def levy(x):
     Levy function - another challenging multimodal function
     Global minimum at (1,1) with value 0
     """
+    # Convert input to numpy array if it's not already
+    x = np.array(x)
+    
+    # Initialize w with the correct shape
     w = 1 + (x - 1) / 4
+    
+    # Compute the first term
     term1 = np.sin(np.pi * w[0])**2
+    
+    # Compute the last term
     term2 = ((w[-1] - 1)**2) * (1 + np.sin(2 * np.pi * w[-1])**2)
-    sum_term = sum([(w[i] - 1)**2 * (1 + 10 * np.sin(np.pi * w[i] + 1)**2) for i in range(len(w)-1)])
+    
+    # Compute the middle sum term
+    sum_term = 0
+    for i in range(len(w)-1):
+        sum_term += (w[i] - 1)**2 * (1 + 10 * np.sin(np.pi * w[i] + 1)**2)
+    
     return term1 + sum_term + term2
 
 # Add this to module/visualization.py
