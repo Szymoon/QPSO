@@ -1,6 +1,6 @@
 # Quantum-Inspired Particle Swarm Optimization (QPSO)
 
-![Algorithm: PSO](https://img.shields.io/badge/Algorithm-PSO-blue) ![Python 3.12](https://img.shields.io/badge/Python-3.12%2B-green) ![License: MIT](https://img.shields.io/badge/License-MIT-yellow)
+![Algorithm: QPSO](https://img.shields.io/badge/Algorithm-QPSO-blue) ![Algorithm: PSO](https://img.shields.io/badge/Algorithm-PSO-blue) ![Python 3.12](https://img.shields.io/badge/Python-3.12%2B-green) ![License: MIT](https://img.shields.io/badge/License-MIT-yellow)
 
 A Python implementation of both Standard Particle Swarm Optimization (PSO) and Quantum-inspired Particle Swarm Optimization (QPSO), with visualization tools and performance comparison capabilities. Demonstrates how QPSO can outperform PSO on complex benchmark functions in 3D and higher-dimensional spaces.
 
