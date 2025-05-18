@@ -154,7 +154,6 @@ Feel free to:
 - Add new benchmark functions.
 - Improve visualizations.
 - Optimize algorithms or add variants.
-- Submit issues or pull requests.
 
 ## License
 
