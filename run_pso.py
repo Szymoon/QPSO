@@ -8,7 +8,7 @@ from module.visualization import ackley, rastrigin, griewank, schwefel, levy, An
 
 # Select function to optimize:
 # Options: 'ackley', 'rastrigin', 'griewank', 'schwefel', 'levy'
-function_name = 'levy'  
+function_name = 'ackley'  
 
 # Number of particles in the swarm
 num_particles = 30  
@@ -18,7 +18,7 @@ max_iter = 100
 
 # Animation speed factor (higher = slower animation)
 # 1.0 = normal speed, 2.0 = half speed, 0.5 = double speed
-speed_factor = 1.5  
+speed_factor = 2.5  
 
 # Function mapping
 function_map = {
@@ -69,5 +69,13 @@ print(f"Global Best Fitness: {results['global_best_fitness']:.6f}")
 print(f"Execution Time: {execution_time:.6f} seconds")
 print(f"Iterations: {results['iterations']}")
 
-# Start animation
+# Define the filename for your GIF
+gif_filename = f"standard_pso_{function_name}_{num_particles}_particles.gif"
+
+# Save the animation as a GIF
+visualizer.save_animation(gif_filename)
+
+# Optionally start animation to display it (can be commented out if you only want to save)
 visualizer.start_animation()
+
+

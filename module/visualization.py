@@ -287,3 +287,32 @@ class AnimatedPSOVisualizer:
         
         plt.tight_layout()
         plt.show()
+    
+    def save_animation(self, filename, dpi=100, writer='pillow'):
+        """
+        Save the animation as a GIF file.
+        
+        Parameters:
+        -----------
+        filename : str
+            The filename to save the animation to (should end with .gif)
+        dpi : int, optional
+            The resolution in dots per inch
+        writer : str, optional
+            The writer to use for saving the animation
+        """
+        if not self.positions_history:
+            print("No optimization data collected. Run the optimization first.")
+            return
+        
+        # Create the animation if it doesn't exist yet
+        if not hasattr(self, 'animation') or self.animation is None:
+            print("Creating animation for saving...")
+            self.animation = FuncAnimation(
+                self.fig, self.update_frame, frames=len(self.positions_history),
+                interval=self.interval, blit=True, repeat=False
+            )
+        
+        print(f"Saving animation to {filename}...")
+        self.animation.save(filename, dpi=dpi, writer=writer)
+        print(f"Animation saved successfully to {filename}!")
