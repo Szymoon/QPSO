@@ -14,7 +14,6 @@ A Python implementation of both Standard Particle Swarm Optimization (PSO) and Q
 - [Usage](#usage)
 - [Results and Visualization](#results-and-visualization)
 - [When to Use QPSO](#when-to-use-qpso)
-- [Contributing](#contributing)
 - [License](#license)
 
 ## Introduction
@@ -147,14 +146,6 @@ python run_comparison.py
 
 For simple or low-dimensional problems, Standard PSO may be sufficient.
 
-## Contributing
-
-Feel free to:
-
-- Add new benchmark functions.
-- Improve visualizations.
-- Optimize algorithms or add variants.
-
 ## License
 
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+This project is licensed under the MIT License.
